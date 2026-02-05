@@ -13,12 +13,20 @@ if (numberOne > numberTwo) {
     // language 
 let languageFR = "fr"
 let languageFRhello = "Bonjour le monde"
+let allLangArray = [{
+    language: "fr",
+    hello: "Bonjour le monde"
+},
+{
+    language: "en",
+    hello: "Hello World"
+}]
 
-if (languageFR = "fr") {
-    console.log (languageFRhello)
+if (allLangArray[0].language === "fr") {
+    console.log (allLangArray)
 }
 else {
-    console.log ("Hello")
+    console.log ("Hello World")
 }
 
 // score assigner
@@ -69,3 +77,52 @@ if (age >= 18 && ticket) {
     else {
         console.log("Access denied.")
     }
+
+
+
+// 
+
+let greet = function (firstName) {
+    console.log(`I'm your father ${firstName}`)
+}
+
+greet("Luke")
+
+//
+let greetTwo = (fN, lN) => {
+    console.log(`I'm your father ${fN} ${lN}`)
+}
+
+greetTwo("Luke", "Skywalker")
+
+
+//
+let isPasswordCorrect = (input) => {
+    let correctPassword = "123456"
+
+    if (input === correctPassword) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(isPasswordCorrect("123456"))
+
+let areCredentialsCorrect = (emailInput, passwordInput) => {
+    let correctEmail = "test@email.com"
+    let correctPassword = "123456"
+
+    if (
+        emailInput === correctEmail && 
+        passwordInput === correctPassword
+    ) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(areCredentialsCorrect("test@email.com", "123456"))
